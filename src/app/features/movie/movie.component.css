@@ -1,0 +1,8 @@
+.container {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  font-size: 3rem;
+  color: white;
+  font-family: monospace;
+}

@@ -1,0 +1,22 @@
+<div class="home-page grid-container">
+  <div *ngFor="let movie of movieList" class="movieList grid-item" (click)="goToMoviePage(movie.id)">
+    <ng-container *ngIf="movie.images">
+      <div *ngFor="let image of movie.images">
+        <div *ngIf="image.type=='thumbnail'">
+          <img class="container" [src]="image.url" [alt]="image.url">
+          <div class="text-block">
+            <h4>{{movie.duration}}</h4>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!movie.images">
+      <h4>{{movie.title}}</h4>
+      <p>{{movie.description}}</p>
+      <div class="text-block">
+        <h4>{{movie.duration}}</h4>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
